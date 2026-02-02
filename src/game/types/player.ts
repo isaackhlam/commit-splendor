@@ -8,4 +8,5 @@ export interface Player {
   cards: Card[];
   reserved: Card[];
   nobles: Noble[];
+  discount: Record<GemColour, number>;
 }
