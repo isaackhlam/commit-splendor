@@ -1,6 +1,6 @@
 import type {Card, GemColour, Player} from "../types";
 
-export const canBuyBard = (
+export const canBuyCard = (
   player: Player,
   card: Card,
 ): boolean => {
