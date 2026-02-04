@@ -3,10 +3,12 @@ import type {GemColour} from "./gem";
 import type {Noble} from "./noble";
 import type {Player} from "./player";
 
+export type Bank = Record<GemColour, number>;
+
 export interface GameState {
   players: Player[];
   currentPlayer: number;
-  bank: Record<GemColour, number>;
+  bank: Bank;
   decks: {
     1: Card[];
     2: Card[];

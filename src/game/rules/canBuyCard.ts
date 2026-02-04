@@ -1,4 +1,4 @@
-import type {Card, GemColour, Player} from "../types";
+import type {Card, GemColour, OrdinaryGemColour, Player} from "../types";
 
 export const canBuyCard = (
   player: Player,
@@ -7,7 +7,7 @@ export const canBuyCard = (
   let numOfGold: number = player.tokens["gold"];
   const discounts: Record<GemColour, number> = player.discount;
   for(const colour in card.cost) {
-    const gemColour = colour as Exclude<GemColour, "gold">;
+    const gemColour = colour as OrdinaryGemColour;
 
     const cost = card.cost[gemColour] ?? 0;
     const numOfToken = player.tokens[gemColour];
