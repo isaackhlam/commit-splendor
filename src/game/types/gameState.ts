@@ -19,5 +19,5 @@ export interface GameState {
     2: Card[];
     3: Card[];
   };
-  nobles: Noble[];
+  nobles: (Noble|null)[];
 }
